@@ -1,0 +1,11 @@
+# Keep local venv, secrets, and the dev SQLite db out of production images.
+.venv
+venv
+__pycache__/
+*.pyc
+.env
+*.db
+*.sqlite3
+.pytest_cache
+.mypy_cache
+.ruff_cache

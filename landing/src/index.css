@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-canvas text-ink antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'ss01';
+  }
+  ::selection {
+    background: rgba(132, 204, 22, 0.25);
+  }
+}
+
+@layer utilities {
+  /* Soft dotted grid backdrop */
+  .bg-dotgrid {
+    background-image: radial-gradient(
+      rgba(15, 23, 42, 0.06) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+  }
+
+  .text-gradient {
+    background: linear-gradient(100deg, #4d7c0f 0%, #65a30d 45%, #84cc16 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .ring-soft {
+    box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.06);
+  }
+
+  /* Frosted pill nav */
+  .glass {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: saturate(180%) blur(12px);
+  }
+
+  /* Snapshot / reduced-motion: stop perpetual CSS animation */
+  .motion-still *,
+  .motion-still *::before,
+  .motion-still *::after {
+    animation: none !important;
+  }
+}
