@@ -78,10 +78,5 @@ services:
     depends_on:
       - backend
 
-  landing:
-    build: ./landing
-    ports:
-      - "8080:80"
-
 volumes:
   pgdata:

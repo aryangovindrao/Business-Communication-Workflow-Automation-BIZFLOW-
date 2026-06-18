@@ -1,8 +1,0 @@
-# Keep local dev artifacts (and the mock-mode .env) out of production images.
-node_modules
-dist
-.env
-.env.*
-.vite
-*.log
-.DS_Store
